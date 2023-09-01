@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
-
+import { Image } from 'astro:assets';
 // Component Imports
 import CallToAction from '../components/CallToAction.astro';
 import Grid from '../components/Grid.astro';
@@ -11,7 +11,7 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
-
+import JaImage from "../images/ja.jpeg"
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
@@ -42,11 +42,10 @@ const projects = (await getCollection('work'))
 					</div>
 				</Hero>
 
-				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
-					src="/assets/ja.jpeg"
+				<Image
+					alt="Bartosz Gotowski smiling in a black shirt"
+					quality="max"
+					src={JaImage}
 				/>
 			</header>
 
