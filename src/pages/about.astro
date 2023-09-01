@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import { Image } from 'astro:assets';
+import atWorkImage from "../images/at-work.jpg";
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
@@ -12,11 +14,9 @@ import Hero from '../components/Hero.astro';
 				title="About"
 				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
 			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
+				<Image
+					src={atWorkImage}
+					alt="Bartosz Gotowski with coworkers holding 10 000 PLN prize for winning the hackathon"
 				/>
 			</Hero>
 
