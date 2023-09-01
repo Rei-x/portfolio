@@ -18,7 +18,7 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en" transition:animate="none">
+<html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
 		<ViewTransitions />
@@ -26,7 +26,7 @@ const { title, description } = Astro.props;
 	<body>
 		<div class="stack backgrounds">
 			<Nav />
-			<slot transition:animate="slide" />
+			<slot />
 			<Footer />
 		</div>
 
